@@ -16,7 +16,17 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware'=>'auth'],function(){
-    Route::get('/teste');
+    //funcionario
+    Route::group(['prefix'=>'funcionario','as'=>'funcionario.'],function(){
+        Route::get('/cadastra','FuncionarioController@cadastra')->name('cadastra');
+    });
+
+    //departamento
+    Route::group(['prefix'=>'departamento','as'=>'departamento.'],function(){
+        Route::get('/cadastra','DepartamentoController@cadastra')->name('cadastra');
+        Route::post('/cadastra','DepartamentoController@cadastraGuarda')->name('cadastraGuarda');
+    });
+    
 });
 
 Auth::routes();

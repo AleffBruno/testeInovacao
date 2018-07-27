@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/teste';
+    protected $redirectTo = '/funcionario/cadastra';
 
     /**
      * Create a new controller instance.

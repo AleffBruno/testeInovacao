@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFuncionarioTable extends Migration
+class CreateMovimentacaoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateFuncionarioTable extends Migration
      */
     public function up()
     {
-        Schema::create('funcionario', function (Blueprint $table) {
+        Schema::create('movimentacao', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome');
-            $table->string('id_departamento');
-            $table->foreign('id_departamento')->references('id')->on('departamento');
+            $table->unsignedInteger('id_funcionario');
+            $table->longText('descricao',500);
+            $table->decimal('valor', 8, 2);
             //$table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateFuncionarioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('funcionario');
+        Schema::dropIfExists('movimentacao');
     }
 }

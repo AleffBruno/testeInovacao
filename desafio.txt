@@ -1,0 +1,43 @@
+Plano de Desenvolvimento de Software 
+ 
+1. Visão do Projeto 1.1 Propósito do Projeto, Escopo e Objetivos 
+ 
+Desenvolvimento de um sistema de controle de custos que auxilie uma empresa a controlar questões como: 
+ 
+Cadastro de funcionários e departamentos atuante. O usuário tem o poder para cadastrar novos funcionários e em quais departamentos este funcionário irá trabalhar. 
+ 
+Cadastro de departamentos O usuário tem o poder para cadastrar os departamentos da empresa. 
+ 
+Gerenciamento de movimentações O usuário tem o poder de definir as movimentações de cada departamento, ou seja, seus custos. 
+ 
+1.2 Premissas e Restrições 
+ 
+• O sistema deverá salvar as seguintes informações do funcionário:  o Nome: Deverá ser uma string de no máximo 200 caracteres. o Departamento: deverá ser escolhido pelo menos 1 departamento. 
+ 
+• O sistema deverá salvar as seguintes informações do departamento:  o Nome: Deverá ser uma string de no máximo 100 caracteres. 
+ 
+• O sistema deverá salvar as seguintes informações da movimentação:  o Funcionário que fez a movimentação. o Descrição: Deverá ser uma string de no máximo 500 caracteres. o Valor da Movimentação: Deverá ser um decimal com duas casas decimais. 
+ 
+• O sistema deverá ter uma tela para visualizar todas as movimentações e deve permitir consultar as movimentações pelo funcionário e efetuou a movimentação e pela descrição da movimentação. 
+ 
+• O backend deverá ser desenvolvido utilizando PHP ou Node. 
+ 
+• O Front End deverá ser desenvolvido utilizando o Angular 5, ou React, ou JQuery 
+ 
+• Para persistência de dados deverá utilizar um ORM. 
+ 
+• Será um diferencial utilizar alguns dos seguintes recursos:  o Injeção de Dependência. o Migrations. o Node. o Web API. o Angular. o React; o Separação em camadas. 
+
+ 
+ 
+ 
+• Será um diferencial desenvolver uma tela de login (Todos os usuários efetuarão todas as ações no sistema). 
+ 
+• Você será avaliado pelos seguintes critérios: o Organização do projeto. o Arquitetura. o Escrita do código (clareza). o Aplicação de POO. o Cumprimento das regras descritas nos itens acima. 
+ 
+• Um bom layout será diferencial nesse projeto. • O código fonte deverá está no github como repositório público. • Informar no readme do github as tecnologias e framework utilizados. • Deverá enviar um e-mail para welson.silva@lanlink.com.br com o seguinte assunto: [Teste para Vaga de Desenvolvimento]. Deverá ser informado no corpo do e-mail seu nome completo e o link para o repositório no github. • Prazo máximo de entrega: ____/____/____ ás 10h. 
+ 
+ 
+ 
+NÃO tenha medo de pesquisar no Google, ele é sempre o nosso aliado. 
+ 
