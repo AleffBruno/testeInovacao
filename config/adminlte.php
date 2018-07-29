@@ -134,7 +134,7 @@ return [
         ],
         [
             'text'    => 'Departamento',
-            'icon'    => 'user',
+            'icon'    => 'briefcase',
             'submenu' => [
                 [
                     'text' => 'Cadastrar',
@@ -142,6 +142,16 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'Movimentacao',
+            'icon'    => 'money',
+            'submenu' => [
+                [
+                    'text' => 'Cadastrar',
+                    'url'  => 'movimentacao/cadastra',
+                ],
+            ],
+        ]
     ],
 
     /*

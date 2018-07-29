@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Departamento;
+use App\Models\Departamento;
 
 class DepartamentoController extends Controller
 {
@@ -20,10 +20,15 @@ class DepartamentoController extends Controller
 
     public function cadastraGuarda(Request $request)
     {
+        $this->validate($request,Departamento::rules());
+
         $novoDepartamento = $this->departamento;
         $novoDepartamento->nome = $request->nome;
         $novoDepartamento->save();
-        return redirect()->back()->with(['success'=>'Departamento '.$request->nome.' criado com sucesso']);
+        
+        return redirect()->back()->with([
+            'success'=>'Departamento '.$request->nome.' criado com sucesso'
+        ]);
         //return view('departamento.cadastra');
     }
 }
