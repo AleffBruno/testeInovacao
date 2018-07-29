@@ -13,7 +13,7 @@ class Funcionario extends Model
     public static function rules() {
         $rules = array(
             'departamentos' => "required",
-            'nome' => "max:200"
+            'nome' => "required|max:200"
         );
 
         return $rules;

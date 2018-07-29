@@ -25,12 +25,16 @@ Route::group(['middleware'=>'auth'],function(){
     //departamento
     Route::group(['prefix'=>'departamento','as'=>'departamento.'],function(){
         Route::get('/cadastra','DepartamentoController@cadastra')->name('cadastra');
+        Route::get('/todosfuncionarios/{idDepartamento}','DepartamentoController@todosFuncionarios')->name('todosFuncionarios');
+
         Route::post('/cadastra','DepartamentoController@cadastraGuarda')->name('cadastraGuarda');
+        
     });
 
     //movimentacao
     Route::group(['prefix'=>'movimentacao','as'=>'movimentacao.'],function(){
         Route::get('/cadastra','MovimentacaoController@cadastra')->name('cadastra');
+        Route::post('/cadastra','MovimentacaoController@cadastraGuarda')->name('cadastraGuarda');
     });
     
 });
