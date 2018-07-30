@@ -17,7 +17,8 @@ class CreateMovimentacaoTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('id_funcionario_departamento');
             $table->longText('descricao',500);
-            $table->decimal('valor', 8, 2);
+            //$table->decimal('valor', 8, 2); //ISSO É O CORRETO
+            $table->string('valor'); // ISSO É UMA GAMBIARRA
             $table->foreign('id_funcionario_departamento')->references('id')->on('funcionario_departamento');
 
 

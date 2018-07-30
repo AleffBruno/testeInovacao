@@ -35,6 +35,7 @@ Route::group(['middleware'=>'auth'],function(){
     Route::group(['prefix'=>'movimentacao','as'=>'movimentacao.'],function(){
         Route::get('/cadastra','MovimentacaoController@cadastra')->name('cadastra');
         Route::post('/cadastra','MovimentacaoController@cadastraGuarda')->name('cadastraGuarda');
+        Route::get('/historico','MovimentacaoController@historico')->name('historico');
     });
     
 });

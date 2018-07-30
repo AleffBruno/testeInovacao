@@ -150,6 +150,10 @@ return [
                     'text' => 'Cadastrar',
                     'url'  => 'movimentacao/cadastra',
                 ],
+                [
+                    'text' => 'Historico',
+                    'url'  => 'movimentacao/historico',
+                ],
             ],
         ]
     ],
