@@ -12,7 +12,7 @@ class Departamento extends Model
 
     public static function rules() {
         $rules = array(
-            'nome' => "max:100"
+            'nome' => "max:100|required"
         );
 
         return $rules;

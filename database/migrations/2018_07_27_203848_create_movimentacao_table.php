@@ -16,7 +16,7 @@ class CreateMovimentacaoTable extends Migration
         Schema::create('movimentacao', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_funcionario_departamento');
-            $table->longText('descricao',500);
+            $table->longText('descricao',500)->nullable();
             //$table->decimal('valor', 8, 2); //ISSO É O CORRETO
             $table->string('valor'); // ISSO É UMA GAMBIARRA
             $table->foreign('id_funcionario_departamento')->references('id')->on('funcionario_departamento');
