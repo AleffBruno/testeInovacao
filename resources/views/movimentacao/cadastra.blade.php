@@ -8,6 +8,8 @@
 
 @section('content')
 
+@include('alerts.all_alerts')
+
 @if($departamentos->count() == 0)
     <h4>Para cadastrar uma movimentacao é necessario a existencia de pelo menos 1 funcionario</h4>
     <form action="{{route('funcionario.cadastra')}}" method="GET">
@@ -110,6 +112,8 @@
 
             function mostraModalParaIniciarCadastroDeMovimentacao() {
                 $('#formCadastraMovimentacao').submit(function(event){
+                    
+                    $('#selectFuncionario').children("option").remove(); // remove todos os "option" do "select" do modal
 
                     idDepartamento = $('#inputDepartamento').val();
 
@@ -124,6 +128,7 @@
 
                         success : function(res){
                             res.forEach(function(item, index){
+                                
                                 $('#selectFuncionario').append('<option value="'+item.id+'">'+item.nome+'</option>');
                             }); 
                             
